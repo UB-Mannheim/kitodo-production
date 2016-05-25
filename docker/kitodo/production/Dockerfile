@@ -24,13 +24,14 @@ FROM tomcat:8-jre8
 MAINTAINER Stefan Weil <stefan.weil@bib.uni-mannheim.de>
 
 # Add the web application (modified to support docker).
-ADD kitodo.war /usr/local/tomcat/webapps/kitodo.war
+COPY kitodo.war /usr/local/tomcat/webapps/kitodo.war
 
 # Add the script files.
 ADD scripts /usr/local/goobi/scripts
 
 # Unpack the Kitodo war file because we must patch the configuration later.
-RUN /usr/bin/unzip /usr/local/tomcat/webapps/kitodo.war -d /usr/local/tomcat/webapps/kitodo
+RUN /usr/bin/unzip /usr/local/tomcat/webapps/kitodo.war -d /usr/local/tomcat/webapps/kitodo && \
+    rm /usr/local/tomcat/webapps/kitodo.war
 
 EXPOSE 8080
 
