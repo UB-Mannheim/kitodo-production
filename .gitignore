@@ -4,3 +4,6 @@
 /config-local
 /deploy.properties
 /dist
+/docker/kitodo/database/setup/
+/docker/kitodo/production/kitodo.war
+/docker/kitodo/production/scripts/
