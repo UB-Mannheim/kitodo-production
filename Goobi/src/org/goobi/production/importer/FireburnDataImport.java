@@ -256,7 +256,7 @@ public class FireburnDataImport {
 		String serverName = "localhost";
 		String db = cfg.getProperty("hibernate.connection.url");
 		String mydatabase = db.substring(db.lastIndexOf("/") + 1);
-		String url = "jdbc:mysql://" + serverName + "/" + mydatabase; // a JDBC url
+		String url = "jdbc:xxxmysql://" + serverName + "/" + mydatabase; // a JDBC url
 
 		String username = cfg.getProperty("hibernate.connection.username");
 
