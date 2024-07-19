@@ -128,6 +128,7 @@ public class JAXBContextCache {
             return false;
         }
 
+        @Override
         public int hashCode() {
             return (clazz + fileName).hashCode();
         }
