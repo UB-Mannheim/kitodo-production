@@ -118,6 +118,7 @@ public class JAXBContextCache {
 
         private final String fileName;
 
+        @Override
         public boolean equals(Object potentialContextDescriptor) {
             if (potentialContextDescriptor instanceof ContextDescriptor) {
                 final ContextDescriptor contextDescriptor = ((ContextDescriptor) potentialContextDescriptor);
